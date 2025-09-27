@@ -1,0 +1,234 @@
+import { FaGithub, FaExternalLinkAlt, FaBookOpen, FaBuilding, FaChartBar, FaPalette } from "react-icons/fa";
+
+export default function Portfolio() {
+  const portfolioItems = [
+    {
+      title: "Think Stack",
+      category: "E-Learning",
+      description: "Think Stack is an intelligent, AI-driven platform designed to transform any content—from documents and articles to specific topics—into interactive quizzes. It automates the entire quiz creation process, allowing educators, trainers, and businesses to effortlessly generate engaging assessments in various formats, such as multiple-choice and true/false.(Coming soon!)",
+      repo: "https://github.com/sailesh-codes/Think-Stack",
+      liveDemoUrl: "https://pointerpointer.com/",
+      icon: "E-Learning"
+    },
+    {
+      title: "Corporate Business Site",
+      category: "Corporate",
+      description: "Professional website for enterprise company.(Coming soon!)",
+      repo: "https://pointerpointer.com/",
+      liveDemoUrl: "https://pointerpointer.com/",
+      icon: "Corporate"
+    },
+    {
+      title: "Pricing Page",
+      category: "SaaS",
+      description: "Interactive pricing page platform delivering actionable business insights",
+      repo: "https://github.com/Nikelesh006/frontend-web",
+      liveDemoUrl: "https://pricing-page-hazel.vercel.app/",
+      icon: "SaaS"
+    },
+    {
+      title: "Creative Portfolio",
+      category: "Portfolio",
+      description: "Stunning portfolio showcase for creative professionals.(Coming soon!)",
+      repo: "https://pointerpointer.com/",
+      liveDemoUrl: "https://pointerpointer.com/",
+      icon: "Portfolio"
+    }
+  ];
+
+  // Function to get the correct icon based on category
+  const getCategoryIcon = (category: string) => {
+    switch (category) {
+      case 'E-Learning':
+        return <FaBookOpen className="text-cyan-300 text-5xl mb-6 relative z-10" />;
+      case 'Corporate':
+        return <FaBuilding className="text-cyan-300 text-4xl" />;
+      case 'SaaS':
+        return <FaChartBar className="text-cyan-300 text-4xl relative z-10" />;
+      case 'Portfolio':
+        return <FaPalette className="text-cyan-300 text-4xl relative z-10" />;
+      default:
+        return <FaGithub className="text-cyan-300 text-5xl mb-6 relative z-10" />;
+    }
+  };
+  
+    // Function to get the correct icon for smaller cards
+    const getSmallCategoryIcon = (category: string) => {
+        switch (category) {
+          case 'E-Learning':
+            return <FaBookOpen className="text-cyan-300 text-4xl relative z-10" />;
+          case 'Corporate':
+            return <FaBuilding className="text-cyan-300 text-4xl relative z-10" />;
+          case 'SaaS':
+            return <FaChartBar className="text-cyan-300 text-4xl relative z-10" />;
+          case 'Portfolio':
+            return <FaPalette className="text-cyan-300 text-4xl relative z-10" />;
+          default:
+            return <FaGithub className="text-cyan-300 text-4xl relative z-10" />;
+        }
+      };
+
+  return (
+    <section id="portfolio" className="bg-black py-16 px-2 min-h-[60vh]">
+      <h2 className="text-4xl md:text-5xl font-extrabold text-cyan-400 text-center mb-2 tracking-tight">
+        Featured Projects
+      </h2>
+      <p className="text-neutral-200 text-lg md:text-xl mb-10 text-center font-semibold">
+        Showcasing our best GitHub work across different industries and technologies
+      </p>
+
+      <style>{`
+        .holographic-card {
+          position: relative;
+          border-radius: 1rem;
+          overflow: hidden;
+          background: rgba(23,25,28,0.75);
+          transition: all 0.5s cubic-bezier(.21,.6,.47,1.01);
+          backdrop-filter: blur(12px);
+          box-shadow: 0 0 38px 3px rgba(14,14,22,0.23);
+        }
+        .holographic-card:hover {
+          transform: scale(1.05);
+          box-shadow: 0 0 40px 0 rgba(66,255,255,0.17);
+          z-index: 10;
+        }
+        .holographic-card::before {
+          content: '';
+          position: absolute;
+          top: -60%;
+          left: -60%;
+          width: 220%;
+          height: 220%;
+          background: linear-gradient(
+            0deg, 
+            transparent, 
+            transparent 35%, 
+            rgba(0,255,255,0.18)
+          );
+          transform: rotate(-45deg);
+          transition: all 0.5s ease;
+          opacity: 0;
+          pointer-events: none;
+          border-radius: 2rem;
+          z-index: 1;
+        }
+        .holographic-card:hover::before {
+          opacity: 1;
+          transform: rotate(-45deg) translateY(90%);
+        }
+      `}</style>
+
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        {/* Left: Large Main Card */}
+        <div className={`holographic-card flex flex-col items-center justify-between p-8 min-h-[400px]`}>
+          {getCategoryIcon(portfolioItems[0].icon)}
+          <span className="uppercase text-xs tracking-wide font-extrabold text-cyan-100 mt-2 mb-1 relative z-10">
+            {portfolioItems[0].category}
+          </span>
+          <h3 className="text-2xl font-extrabold text-cyan-400 text-center mb-2 leading-tight relative z-10">
+            {portfolioItems[0].title}
+          </h3>
+          <p className="text-base text-cyan-100 text-center flex-grow mb-6 relative z-10">
+            {portfolioItems[0].description}
+          </p>
+          <div className="flex items-center justify-center flex-wrap gap-4 mt-auto relative z-10">
+            <a
+              href={portfolioItems[0].repo}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-2 rounded-full bg-gradient-to-r from-cyan-200 via-white/80 to-cyan-400 text-gray-900 font-semibold shadow hover:scale-105 transition flex items-center gap-2"
+            >
+              <FaGithub /> GitHub
+            </a>
+            <a
+              href={portfolioItems[0].liveDemoUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-2 rounded-full bg-gradient-to-r from-cyan-200 via-white/80 to-cyan-400 text-gray-900 font-semibold shadow hover:scale-105 transition flex items-center gap-2"
+            >
+              <FaExternalLinkAlt /> Live Demo
+            </a>
+          </div>
+        </div>
+
+        {/* Right: Wide Card + Two Stacked Smaller Cards */}
+        <div className="flex flex-col gap-8">
+          {/* Top: Wide card */}
+          <div className={`holographic-card flex flex-col sm:flex-row items-center sm:items-stretch p-8`}
+            style={{ minHeight: "190px" }}>
+            <div className="flex items-center justify-center w-full sm:w-1/3 mb-4 sm:mb-0 relative z-10">
+              {getCategoryIcon(portfolioItems[1].icon)}
+            </div>
+            <div className="flex flex-col flex-grow sm:pl-8 w-full sm:w-2/3 relative z-10">
+              <span className="uppercase text-xs tracking-wide font-extrabold text-cyan-100 mb-1">
+                {portfolioItems[1].category}
+              </span>
+              <h3 className="text-2xl font-extrabold text-cyan-400 text-left mb-2 leading-tight">
+                {portfolioItems[1].title}
+              </h3>
+              <p className="text-base text-cyan-100 text-left mb-5">
+                {portfolioItems[1].description}
+              </p>
+              <div className="flex items-center gap-4 mt-auto">
+                <a
+                  href={portfolioItems[1].repo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-6 py-2 rounded-full bg-gradient-to-r from-cyan-200 via-white/80 to-cyan-400 text-gray-900 font-semibold shadow hover:scale-105 transition flex items-center gap-2"
+                >
+                  <FaGithub /> GitHub
+                </a>
+                <a
+                  href={portfolioItems[1].liveDemoUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-6 py-2 rounded-full bg-gradient-to-r from-cyan-200 via-white/80 to-cyan-400 text-gray-900 font-semibold shadow hover:scale-105 transition flex items-center gap-2"
+                >
+                  <FaExternalLinkAlt /> Live Demo
+                </a>
+              </div>
+            </div>
+          </div>
+          {/* Bottom: 2x Stacked small cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {[2, 3].map(ix => (
+              <div
+                key={ix}
+                className={`holographic-card flex flex-col items-center p-8 min-h-[190px]`}
+              >
+                {getSmallCategoryIcon(portfolioItems[ix].icon)}
+                <span className="uppercase text-xs tracking-wide font-extrabold text-cyan-100 mt-4 mb-1 relative z-10">
+                  {portfolioItems[ix].category}
+                </span>
+                <h3 className="text-xl font-extrabold text-cyan-400 text-center mb-2 leading-tight relative z-10">
+                  {portfolioItems[ix].title}
+                </h3>
+                <p className="text-base text-cyan-100 text-center flex-grow mb-5 relative z-10">
+                  {portfolioItems[ix].description}
+                </p>
+                <div className="flex items-center justify-center flex-wrap gap-3 mt-auto relative z-10">
+                    <a
+                      href={portfolioItems[ix].repo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-5 py-2 rounded-full bg-gradient-to-r from-cyan-200 via-white/80 to-cyan-400 text-gray-900 font-semibold shadow hover:scale-105 transition flex items-center gap-2"
+                    >
+                      <FaGithub /> GitHub
+                    </a>
+                    <a
+                      href={portfolioItems[ix].liveDemoUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-5 py-2 rounded-full bg-gradient-to-r from-cyan-200 via-white/80 to-cyan-400 text-gray-900 font-semibold shadow hover:scale-105 transition flex items-center gap-2"
+                    >
+                      <FaExternalLinkAlt /> Demo
+                    </a>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}

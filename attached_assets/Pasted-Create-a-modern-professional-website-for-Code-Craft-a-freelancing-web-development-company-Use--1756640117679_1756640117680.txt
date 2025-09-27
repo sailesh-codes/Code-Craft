@@ -1,0 +1,168 @@
+Create a modern, professional website for "Code Craft" - a freelancing web development company. Use the following specifications:
+
+Design Theme & Colors
+Primary colors: Black (#000000), Deep Blue (#1e3a8a), White (#ffffff), Purple (#8b5cf6)
+
+Accent colors: Light blue (#3b82f6), Light purple (#a855f7)
+
+Background: Dark theme with black/dark blue gradients
+
+Text: White text on dark backgrounds, dark text on light sections
+
+Website Structure & Sections
+1. Header/Navigation
+Logo: "Code Craft" with a coding icon (</> symbol)
+
+Navigation menu: Home, Services, Portfolio, About, Contact
+
+CTA button: "Get Free Quote"
+
+Sticky header with smooth scroll
+
+2. Hero Section
+Headline: "Crafting Digital Excellence, One Code at a Time"
+
+Subheading: "Professional web development services that bring your vision to life"
+
+CTA buttons: "View Our Work" (purple) and "Start Project" (blue)
+
+Background: Gradient from black to dark blue with subtle coding-themed graphics
+
+3. Services Section
+Title: "Our Services"
+
+Services offered:
+
+Custom Website Development
+
+E-commerce Solutions
+
+Web Application Development
+
+Mobile-Responsive Design
+
+Website Maintenance & Support
+
+SEO Optimization
+
+Each service with an icon, description, and "Learn More" button
+
+4. Portfolio Section
+Title: "Featured Projects"
+
+Grid layout showing 6 project thumbnails
+
+Project categories: E-commerce, Corporate, SaaS, Portfolio sites
+
+Hover effects revealing project details
+
+"View All Projects" button
+
+5. About Section
+Title: "Why Choose Code Craft?"
+
+Key points:
+
+5+ years of experience
+
+100+ successful projects
+
+Fast turnaround time
+
+24/7 support
+
+Affordable pricing
+
+Team member cards with photos and roles
+
+6. Technologies Section
+Title: "Technologies We Master"
+
+Tech stack icons: HTML5, CSS3, JavaScript, React, Node.js, Python, PHP, WordPress, Shopify
+
+Animated tech stack carousel
+
+7. Testimonials Section
+Title: "What Our Clients Say"
+
+3-4 client testimonials with ratings
+
+Client photos and company names
+
+Sliding carousel format
+
+8. Pricing Section
+Title: "Transparent Pricing"
+
+Three tiers:
+
+Basic: Landing page ($299)
+
+Standard: Multi-page website ($599)
+
+Premium: Custom web app ($1299+)
+
+Feature comparison table
+
+"Contact for Custom Quote" option
+
+9. Contact Section
+Title: "Let's Build Something Amazing Together"
+
+Contact form: Name, Email, Project Type, Budget, Message
+
+Contact info: Email, phone, location
+
+Social media links: LinkedIn, GitHub, Twitter
+
+Response time: "We respond within 24 hours"
+
+10. Footer
+Company logo and tagline
+
+Quick links menu
+
+Contact information
+
+Copyright notice
+
+Social media icons
+
+Technical Requirements
+Framework: Use HTML5, CSS3, JavaScript (or React if preferred)
+
+Responsive design: Mobile-first approach
+
+Animations: Smooth scroll, fade-in effects, hover animations
+
+Performance: Fast loading, optimized images
+
+SEO: Meta tags, semantic HTML structure
+
+Forms: Functional contact form with validation
+
+Additional Features
+Loading animation with Code Craft logo
+
+Dark mode toggle (optional)
+
+Live chat widget simulation
+
+Back to top button
+
+Smooth scrolling navigation
+
+Typing animation for hero headline
+
+Counter animations for statistics (projects completed, clients served)
+
+Content Tone
+Professional yet approachable
+
+Confidence-inspiring
+
+Technical expertise showcase
+
+Client-focused messaging
+
+Clear value propositions
