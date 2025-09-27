@@ -2,6 +2,9 @@
 node_modules/
 dist/
 
+# Ignore duplicate project directories
+CodeCraftSite/
+
 # OS/generated files
 .DS_Store
 
