@@ -1,15 +1,13 @@
-import type { VercelRequest, VercelResponse } from '@vercel/node';
-
 // Utility to set minimal CORS headers (safe for same-origin and helpful if tested cross-origin)
-function setCors(res: VercelResponse) {
+function setCors(res: any) {
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'POST, GET, OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
 }
 
 export default async function handler(
-  req: VercelRequest,
-  res: VercelResponse,
+  req: any,
+  res: any,
 ) {
   setCors(res);
 
