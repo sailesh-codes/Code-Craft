@@ -63,10 +63,23 @@ export default function Contact() {
     }
     setIsSubmitting(true);
     try {
-      const res = await fetch('/api/contact', {
+      const res = await fetch('https://formsubmit.co/ajax/codecraft2k@gmail.com', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          projectType: formData.projectType,
+          budget: formData.budget,
+          message: formData.message,
+          _subject: 'New Contact from Code Craft Website',
+          _template: 'table',
+          _replyto: formData.email,
+          _captcha: 'false',
+        }),
       });
       if (!res.ok) throw new Error('Failed');
       toast({
