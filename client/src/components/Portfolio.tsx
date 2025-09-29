@@ -1,4 +1,4 @@
-import { FaGithub, FaExternalLinkAlt, FaBookOpen, FaBuilding, FaChartBar, FaPalette } from "react-icons/fa";
+import { FaGithub, FaExternalLinkAlt, FaBookOpen, FaBuilding, FaChartBar, FaPalette, FaFilm } from "react-icons/fa";
 
 export default function Portfolio() {
   const portfolioItems = [
@@ -11,12 +11,12 @@ export default function Portfolio() {
       icon: "E-Learning"
     },
     {
-      title: "Corporate Business Site",
-      category: "Corporate",
-      description: "Professional website for enterprise company.(Coming soon!)",
-      repo: "https://pointerpointer.com/",
-      liveDemoUrl: "https://pointerpointer.com/",
-      icon: "Corporate"
+      title: "MoviePedia",
+      category: "API",
+      description: "MoviePedia is a movie database API that provides access to a vast collection of movies, TV shows, and their details. It offers a wide range of features, including movie search, movie details, and movie recommendations. The API is built using Node.js and Express.js, and it is hosted on Vercel. The API is free to use and is available for both personal and commercial use.",
+      repo: "https://github.com/sailesh-codes/MoviePedia",
+      liveDemoUrl: "https://movie-pedia-navy.vercel.app/",
+      icon: "Film"
     },
     {
       title: "Pricing Page",
@@ -41,7 +41,9 @@ export default function Portfolio() {
     switch (category) {
       case 'E-Learning':
         return <FaBookOpen className="text-cyan-300 text-5xl mb-6 relative z-10" />;
-      case 'Corporate':
+      case 'Film': // <-- Changed for MoviePedia
+        return <FaFilm className="text-cyan-300 text-5xl mb-6 relative z-10" />;
+      case 'API':
         return <FaBuilding className="text-cyan-300 text-4xl" />;
       case 'SaaS':
         return <FaChartBar className="text-cyan-300 text-4xl relative z-10" />;
@@ -51,22 +53,24 @@ export default function Portfolio() {
         return <FaGithub className="text-cyan-300 text-5xl mb-6 relative z-10" />;
     }
   };
-  
-    // Function to get the correct icon for smaller cards
-    const getSmallCategoryIcon = (category: string) => {
-        switch (category) {
-          case 'E-Learning':
-            return <FaBookOpen className="text-cyan-300 text-4xl relative z-10" />;
-          case 'Corporate':
-            return <FaBuilding className="text-cyan-300 text-4xl relative z-10" />;
-          case 'SaaS':
-            return <FaChartBar className="text-cyan-300 text-4xl relative z-10" />;
-          case 'Portfolio':
-            return <FaPalette className="text-cyan-300 text-4xl relative z-10" />;
-          default:
-            return <FaGithub className="text-cyan-300 text-4xl relative z-10" />;
-        }
-      };
+
+  // Function to get the correct icon for smaller cards
+  const getSmallCategoryIcon = (category: string) => {
+    switch (category) {
+      case 'E-Learning':
+        return <FaBookOpen className="text-cyan-300 text-4xl relative z-10" />;
+      case 'Film': // <-- Changed for MoviePedia small card
+        return <FaFilm className="text-cyan-300 text-4xl relative z-10" />;
+      case 'API':
+        return <FaBuilding className="text-cyan-300 text-4xl relative z-10" />;
+      case 'SaaS':
+        return <FaChartBar className="text-cyan-300 text-4xl relative z-10" />;
+      case 'Portfolio':
+        return <FaPalette className="text-cyan-300 text-4xl relative z-10" />;
+      default:
+        return <FaGithub className="text-cyan-300 text-4xl relative z-10" />;
+    }
+  };
 
   return (
     <section id="portfolio" className="bg-black py-16 px-2 min-h-[60vh]">
