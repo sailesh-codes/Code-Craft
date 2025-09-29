@@ -2,50 +2,6 @@
 
 A modern, responsive website for Code Craft, a professional web development company.
 
-## 🚀 Quick Deployment to Vercel
-
-### Prerequisites
-- Node.js 18+ installed
-- Vercel CLI installed (`npm i -g vercel`)
-
-### Deployment Steps
-
-1. **Install dependencies:**
-   ```bash
-   npm install
-   ```
-
-2. **Build the project:**
-   ```bash
-   npm run build
-   ```
-
-3. **Copy static files to root:**
-   ```bash
-   # Windows
-   xcopy /E /Y dist\public\* .
-   
-   # Mac/Linux
-   cp -r dist/public/* .
-   ```
-
-4. **Deploy to Vercel:**
-   ```bash
-   vercel --prod
-   ```
-
-### Alternative: Use the deployment script
-
-**Windows:**
-```bash
-deploy.bat
-```
-
-**Mac/Linux:**
-```bash
-chmod +x deploy.sh
-./deploy.sh
-```
 
 ## 📁 Project Structure
 
@@ -57,27 +13,7 @@ chmod +x deploy.sh
 ├── vercel.json            # Vercel configuration
 ├── package.json           # Dependencies and scripts
 └── vite.config.ts         # Vite configuration
-```
 
-## 🔧 API Endpoints
-
-- `POST /api/contact` - Contact form submission
-
-## 🛠️ Development
-
-### Local Development
-```bash
-npm run dev
-```
-
-### Build for Production
-```bash
-npm run build
-```
-
-### Type Checking
-```bash
-npm run check
 ```
 
 ## 📝 Features
