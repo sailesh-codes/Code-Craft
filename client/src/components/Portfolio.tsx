@@ -13,7 +13,7 @@ export default function Portfolio() {
     {
       title: "MoviePedia",
       category: "API",
-      description: "MoviePedia is a movie database API that provides access to a vast collection of movies, TV shows, and their details. It offers a wide range of features, including movie search, movie details, and movie recommendations. The API is built using Node.js and Express.js, and it is hosted on Vercel. The API is free to use and is available for both personal and commercial use.",
+      description: "MoviePedia is a movie database API that provides access to a vast collection of movies and TV shows",
       repo: "https://github.com/sailesh-codes/MoviePedia",
       liveDemoUrl: "https://movie-pedia-navy.vercel.app/",
       icon: "Film"
