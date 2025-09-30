@@ -49,7 +49,7 @@ const teamMembers = [
   {
     name: "Sharwin Sriram",
     role: "UI/UX Designer",
-    description: "Creative designer specializing in user experience and modern interface design.",
+    description: "Creative designer specializing in user experience and modern interface design.(Portfolio under construction!)",
     image: "",
     portfolio: "",
     portfolioButtonText: "Under Construction",
@@ -71,7 +71,7 @@ const teamMembers = [
   {
     name: "Makavishnu",
     role: "Database Administrator",
-    description: "Expert in maintaining and securing efficient database operations.",
+    description: "Expert in maintaining and securing efficient database operations.(Portfolio under construction!)",
     image: "",
     portfolio: "",
     portfolioButtonText: "Under Construction",
