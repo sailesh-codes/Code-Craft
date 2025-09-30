@@ -10,7 +10,7 @@ export default function Portfolio() {
       category: "E-Learning",
       description: "Think Stack is an intelligent, AI-driven platform designed to transform any content—from documents and articles to specific topics—into interactive quizzes. It automates the entire quiz creation process, allowing educators, trainers, and businesses to effortlessly generate engaging assessments in various formats, such as multiple-choice and true/false.(Coming soon!)",
       repo: "https://github.com/sailesh-codes/Think-Stack",
-      liveDemoUrl: "https://pointerpointer.com/",
+      liveDemoUrl: "",
       liveDemoText: "Coming soon",
       icon: "E-Learning"
     },
@@ -36,8 +36,8 @@ export default function Portfolio() {
       title: "Creative Portfolio",
       category: "Portfolio",
       description: "Stunning portfolio showcase for creative professionals.(Coming soon!)",
-      repo: "https://pointerpointer.com/",
-      liveDemoUrl: "https://pointerpointer.com/",
+      repo: "",
+      liveDemoUrl: "",
       liveDemoText: "Coming soon",
       icon: "Portfolio"
     }

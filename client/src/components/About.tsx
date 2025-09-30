@@ -51,7 +51,7 @@ const teamMembers = [
     role: "UI/UX Designer",
     description: "Creative designer specializing in user experience and modern interface design.",
     image: "",
-    portfolio: "https://pointerpointer.com/",
+    portfolio: "",
     portfolioButtonText: "Under Construction",
     gradient:
       sectionConfig.about.teamMembers[0]?.gradient ||
@@ -73,7 +73,7 @@ const teamMembers = [
     role: "Database Administrator",
     description: "Expert in maintaining and securing efficient database operations.",
     image: "",
-    portfolio: "https://pointerpointer.com/",
+    portfolio: "",
     portfolioButtonText: "Under Construction",
     gradient:
       sectionConfig.about.teamMembers[0]?.gradient ||
