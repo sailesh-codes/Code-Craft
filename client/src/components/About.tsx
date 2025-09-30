@@ -1,6 +1,7 @@
 import { useCounterAnimation } from "@/hooks/use-counter-animation";
 import { FaRocket, FaDollarSign, FaHeadset, FaExpandArrowsAlt } from "react-icons/fa";
 import { sectionConfig, getGradientByIndex } from "@/config/cardGradients";
+import { useToast } from "./Toast";
 
 const keyPoints = [
   {
@@ -81,6 +82,7 @@ const teamMembers = [
 ];
 
 export default function About() {
+  const { showToast, ToastComponent } = useToast();
   const experienceRef = useCounterAnimation(5, 2000);
   const projectsRef = useCounterAnimation(100, 2000);
   const clientsRef = useCounterAnimation(50, 2000);
@@ -88,6 +90,7 @@ export default function About() {
 
   return (
     <section id="about" className="bg-black py-20 px-4 max-w-7xl mx-auto">
+      {ToastComponent}
       <h2 className="text-4xl md:text-5xl font-extrabold text-cyan-400 text-center mb-8 tracking-tight">
         Why Choose Code Craft?
       </h2>
@@ -193,6 +196,12 @@ export default function About() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="mt-auto px-7 py-2 rounded-full bg-gradient-to-r from-white/90 to-cyan-200 text-gray-900 font-semibold shadow hover:scale-105 transition flex items-center justify-center text-center"
+                  onClick={(e) => {
+                    if ((member.portfolio || "").includes("pointerpointer.com")) {
+                      e.preventDefault();
+                      showToast("Coming soon");
+                    }
+                  }}
                 >
                   {member.portfolioButtonText || "View Portfolio"}
                 </a>

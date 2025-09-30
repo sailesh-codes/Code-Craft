@@ -1,6 +1,9 @@
 import { FaGithub, FaExternalLinkAlt, FaBookOpen, FaBuilding, FaChartBar, FaPalette, FaFilm } from "react-icons/fa";
+import { useToast } from "./Toast";
 
 export default function Portfolio() {
+  const { showToast, ToastComponent } = useToast();
+  
   const portfolioItems = [
     {
       title: "Think Stack",
@@ -8,6 +11,7 @@ export default function Portfolio() {
       description: "Think Stack is an intelligent, AI-driven platform designed to transform any content—from documents and articles to specific topics—into interactive quizzes. It automates the entire quiz creation process, allowing educators, trainers, and businesses to effortlessly generate engaging assessments in various formats, such as multiple-choice and true/false.(Coming soon!)",
       repo: "https://github.com/sailesh-codes/Think-Stack",
       liveDemoUrl: "https://pointerpointer.com/",
+      liveDemoText: "Coming soon",
       icon: "E-Learning"
     },
     {
@@ -16,6 +20,7 @@ export default function Portfolio() {
       description: "MoviePedia is a movie database API that provides access to a vast collection of movies and TV shows",
       repo: "https://github.com/sailesh-codes/MoviePedia",
       liveDemoUrl: "https://movie-pedia-navy.vercel.app/",
+      liveDemoText: "Live Demo",
       icon: "Film"
     },
     {
@@ -24,6 +29,7 @@ export default function Portfolio() {
       description: "Interactive pricing page platform delivering actionable business insights",
       repo: "https://github.com/Nikelesh006/frontend-web",
       liveDemoUrl: "https://pricing-page-hazel.vercel.app/",
+      liveDemoText: "Live Demo",
       icon: "SaaS"
     },
     {
@@ -32,6 +38,7 @@ export default function Portfolio() {
       description: "Stunning portfolio showcase for creative professionals.(Coming soon!)",
       repo: "https://pointerpointer.com/",
       liveDemoUrl: "https://pointerpointer.com/",
+      liveDemoText: "Coming soon",
       icon: "Portfolio"
     }
   ];
@@ -74,6 +81,7 @@ export default function Portfolio() {
 
   return (
     <section id="portfolio" className="bg-black py-16 px-2 min-h-[60vh]">
+      {ToastComponent}
       <h2 className="text-4xl md:text-5xl font-extrabold text-cyan-400 text-center mb-2 tracking-tight">
         Featured Projects
       </h2>
@@ -136,11 +144,21 @@ export default function Portfolio() {
             {portfolioItems[0].description}
           </p>
           <div className="flex items-center justify-center flex-wrap gap-4 mt-auto relative z-10">
+            {/* Util handler */}
+            {/* Declare once per card section to keep code concise */}
+            {/**/}
             <a
               href={portfolioItems[0].repo}
               target="_blank"
               rel="noopener noreferrer"
               className="px-6 py-2 rounded-full bg-gradient-to-r from-cyan-200 via-white/80 to-cyan-400 text-gray-900 font-semibold shadow hover:scale-105 transition flex items-center gap-2"
+              onClick={(e) => {
+                const url = portfolioItems[0].repo;
+                if (url.includes("pointerpointer.com")) {
+                  e.preventDefault();
+                  showToast("Coming soon");
+                }
+              }}
             >
               <FaGithub /> GitHub
             </a>
@@ -149,8 +167,16 @@ export default function Portfolio() {
               target="_blank"
               rel="noopener noreferrer"
               className="px-6 py-2 rounded-full bg-gradient-to-r from-cyan-200 via-white/80 to-cyan-400 text-gray-900 font-semibold shadow hover:scale-105 transition flex items-center gap-2"
+              onClick={(e) => {
+                const url = portfolioItems[0].liveDemoUrl;
+                const text = portfolioItems[0].liveDemoText?.toLowerCase() || "";
+                if (text.includes("coming soon") || url.includes("pointerpointer.com")) {
+                  e.preventDefault();
+                  showToast("Coming soon");
+                }
+              }}
             >
-              <FaExternalLinkAlt /> Live Demo
+              <FaExternalLinkAlt /> {portfolioItems[0].liveDemoText}
             </a>
           </div>
         </div>
@@ -179,6 +205,13 @@ export default function Portfolio() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-6 py-2 rounded-full bg-gradient-to-r from-cyan-200 via-white/80 to-cyan-400 text-gray-900 font-semibold shadow hover:scale-105 transition flex items-center gap-2"
+                  onClick={(e) => {
+                    const url = portfolioItems[1].repo;
+                    if (url.includes("pointerpointer.com")) {
+                      e.preventDefault();
+                      showToast("Coming soon");
+                    }
+                  }}
                 >
                   <FaGithub /> GitHub
                 </a>
@@ -187,8 +220,16 @@ export default function Portfolio() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-6 py-2 rounded-full bg-gradient-to-r from-cyan-200 via-white/80 to-cyan-400 text-gray-900 font-semibold shadow hover:scale-105 transition flex items-center gap-2"
+                  onClick={(e) => {
+                    const url = portfolioItems[1].liveDemoUrl;
+                    const text = portfolioItems[1].liveDemoText?.toLowerCase() || "";
+                    if (text.includes("coming soon") || url.includes("pointerpointer.com")) {
+                      e.preventDefault();
+                      showToast("Coming soon");
+                    }
+                  }}
                 >
-                  <FaExternalLinkAlt /> Live Demo
+                  <FaExternalLinkAlt /> {portfolioItems[1].liveDemoText}
                 </a>
               </div>
             </div>
@@ -216,6 +257,13 @@ export default function Portfolio() {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="px-5 py-2 rounded-full bg-gradient-to-r from-cyan-200 via-white/80 to-cyan-400 text-gray-900 font-semibold shadow hover:scale-105 transition flex items-center gap-2"
+                      onClick={(e) => {
+                        const url = portfolioItems[ix].repo;
+                        if (url.includes("pointerpointer.com")) {
+                          e.preventDefault();
+                          showToast("Coming soon");
+                        }
+                      }}
                     >
                       <FaGithub /> GitHub
                     </a>
@@ -224,8 +272,16 @@ export default function Portfolio() {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="px-5 py-2 rounded-full bg-gradient-to-r from-cyan-200 via-white/80 to-cyan-400 text-gray-900 font-semibold shadow hover:scale-105 transition flex items-center gap-2"
+                      onClick={(e) => {
+                        const url = portfolioItems[ix].liveDemoUrl;
+                        const text = (portfolioItems as any)[ix].liveDemoText?.toLowerCase() || "";
+                        if (text.includes("coming soon") || url.includes("pointerpointer.com")) {
+                          e.preventDefault();
+                          showToast("Coming soon");
+                        }
+                      }}
                     >
-                      <FaExternalLinkAlt /> Demo
+                      <FaExternalLinkAlt /> {portfolioItems[ix].liveDemoText}
                     </a>
                 </div>
               </div>
