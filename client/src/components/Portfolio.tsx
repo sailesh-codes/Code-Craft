@@ -33,12 +33,12 @@ export default function Portfolio() {
       icon: "SaaS"
     },
     {
-      title: "Creative Portfolio",
-      category: "Portfolio",
-      description: "Stunning portfolio showcase for creative professionals.(Coming soon!)",
-      repo: "",
-      liveDemoUrl: "",
-      liveDemoText: "Coming soon",
+      title: "Login Page",
+      category: "UI/UX Design",
+      description: "A stylish/modern login page demo featuring UI/UX design.",
+      repo: "https://github.com/Sharwin-sriram/LoginTemplate",
+      liveDemoUrl: "https://login-template-ebon.vercel.app/",
+      liveDemoText: "Live Demo",
       icon: "Portfolio"
     }
   ];
