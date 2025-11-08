@@ -87,7 +87,7 @@ export default function Hero() {
               data-testid="text-hero-title"
             >
               Crafting Digital
-              <span className="block sm:inline">Excellence,</span>
+              <span className="block sm:inline sm:ml-2">Excellence,</span>
             </div>
             <span className="gradient-text block mt-2 sm:mt-0">One Code at a Time</span>
           </h1>
