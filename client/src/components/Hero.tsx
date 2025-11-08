@@ -2,17 +2,7 @@ import { useEffect, useState } from "react";
 
 
 export default function Hero() {
-  const [typingComplete, setTypingComplete] = useState(false);
-
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setTypingComplete(true);
-    }, 3500);
-
-
-    return () => clearTimeout(timer);
-  }, []);
+  // Animation states removed for static text display
 
 
   const handleSmoothScroll = (sectionId: string) => {
@@ -82,10 +72,7 @@ export default function Hero() {
       <div className="container mx-auto px-4 text-center relative z-10">
         <div className="max-w-4xl mx-auto px-2">
           <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 sm:mb-6 animate-fade-in">
-            <div
-              className={`overflow-visible ${!typingComplete ? 'animate-typing' : ''}`}
-              data-testid="text-hero-title"
-            >
+            <div className="overflow-visible" data-testid="text-hero-title">
               Crafting Digital
               <span className="block sm:inline sm:ml-2">Excellence,</span>
             </div>
