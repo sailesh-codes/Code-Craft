@@ -73,7 +73,7 @@ export default function Hero() {
         <div className="max-w-4xl mx-auto px-2">
           <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 sm:mb-6 animate-fade-in">
             <div className="overflow-visible" data-testid="text-hero-title">
-              Crafting Digital
+              Crafting Digital{' '}
               <span className="block sm:inline sm:ml-2">Excellence,</span>
             </div>
             <span className="gradient-text block mt-2 sm:mt-0">One Code at a Time</span>
