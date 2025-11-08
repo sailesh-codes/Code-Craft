@@ -80,21 +80,19 @@ export default function Hero() {
 
 
       <div className="container mx-auto px-4 text-center relative z-10">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 animate-fade-in">
-            <span
-              className={`overflow-hidden border-r-3 border-purple-500 whitespace-nowrap ${
-                !typingComplete ? 'animate-typing' : ''
-              }`}
+        <div className="max-w-4xl mx-auto px-2">
+          <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 sm:mb-6 animate-fade-in">
+            <div
+              className={`overflow-visible ${!typingComplete ? 'animate-typing' : ''}`}
               data-testid="text-hero-title"
             >
-              Crafting Digital Excellence,
-            </span>
-            <br />
-            <span className="gradient-text">One Code at a Time</span>
+              Crafting Digital
+              <span className="block sm:inline">Excellence,</span>
+            </div>
+            <span className="gradient-text block mt-2 sm:mt-0">One Code at a Time</span>
           </h1>
           <p
-            className="text-lg sm:text-xl md:text-2xl text-gray-300 mb-8 animate-slide-up"
+            className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 mb-6 sm:mb-8 px-2 animate-slide-up"
             style={{ animationDelay: '0.5s' }}
             data-testid="text-hero-subtitle"
           >
