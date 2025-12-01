@@ -1,4 +1,4 @@
-import { FaGithub, FaExternalLinkAlt, FaBookOpen, FaBuilding, FaChartBar, FaPalette, FaFilm } from "react-icons/fa";
+import { FaGithub, FaExternalLinkAlt, FaBookOpen, FaBuilding, FaChartBar, FaPalette, FaFilm, FaShoppingCart } from "react-icons/fa";
 import { useToast } from "./Toast";
 
 export default function Portfolio() {
@@ -6,13 +6,13 @@ export default function Portfolio() {
   
   const portfolioItems = [
     {
-      title: "Think Stack",
-      category: "E-Learning",
-      description: "Think Stack is an intelligent, AI-driven platform designed to transform any content—from documents and articles to specific topics—into interactive quizzes. It automates the entire quiz creation process, allowing educators, trainers, and businesses to effortlessly generate engaging assessments in various formats, such as multiple-choice and true/false.(Coming soon!)",
-      repo: "https://github.com/sailesh-codes/Think-Stack",
+      title: "Megasifi",
+      category: "E-Commerce",
+      description: "Megasifi is an e‑commerce platform concept that works like a dedicated online marketplace: customers can browse products, add them to a cart, pay digitally, and get orders fulfilled without ever visiting a physical store. It follows standard e‑commerce principles (product catalog, checkout flow, online payments) but can be customized for your niche, branding, and automation needs.",
+      repo: "",
       liveDemoUrl: "",
       liveDemoText: "Coming soon",
-      icon: "E-Learning"
+      icon: "ShoppingCart"
     },
     {
       title: "MoviePedia",
@@ -24,20 +24,20 @@ export default function Portfolio() {
       icon: "Film"
     },
     {
-      title: "Pricing Page",
+      title: "Echo AI",
       category: "SaaS",
-      description: "Interactive pricing page platform delivering actionable business insights",
-      repo: "https://github.com/Nikelesh006/frontend-web",
-      liveDemoUrl: "https://pricing-page-hazel.vercel.app/",
+      description: "Echo AI is an interactive AI assistant that can help you with answering questions.",
+      repo: "https://github.com/sailesh-codes/ECHO-AI",
+      liveDemoUrl: "https://echo-ai-one-xi.vercel.app/auth",
       liveDemoText: "Live Demo",
       icon: "SaaS"
     },
     {
-      title: "Login Page",
-      category: "UI/UX Design",
-      description: "A stylish/modern login page demo featuring UI/UX design.",
-      repo: "https://github.com/Sharwin-sriram/LoginTemplate",
-      liveDemoUrl: "https://login-template-ebon.vercel.app/",
+      title: "K.S.M",
+      category: "Brand Portfolio",
+      description: "A stylish/modern brand portfolio website.",
+      repo: "https://github.com/sailesh-codes/K.S.M",
+      liveDemoUrl: "https://www.newks-stores.in/",
       liveDemoText: "Live Demo",
       icon: "Portfolio"
     }
@@ -46,6 +46,8 @@ export default function Portfolio() {
   // Function to get the correct icon based on category
   const getCategoryIcon = (category: string) => {
     switch (category) {
+      case 'E-Commerce':
+        return <FaShoppingCart className="text-cyan-300 text-5xl mb-6 relative z-10" />;
       case 'E-Learning':
         return <FaBookOpen className="text-cyan-300 text-5xl mb-6 relative z-10" />;
       case 'Film': // <-- Changed for MoviePedia
@@ -64,6 +66,8 @@ export default function Portfolio() {
   // Function to get the correct icon for smaller cards
   const getSmallCategoryIcon = (category: string) => {
     switch (category) {
+      case 'E-Commerce':
+        return <FaShoppingCart className="text-cyan-300 text-4xl relative z-10" />;
       case 'E-Learning':
         return <FaBookOpen className="text-cyan-300 text-4xl relative z-10" />;
       case 'Film': // <-- Changed for MoviePedia small card
