@@ -1,0 +1,264 @@
+.headerWrapper {
+  position: fixed;
+  width: 85vw;
+  height: 4.5rem;
+  z-index: 100;
+  margin: 1rem 0;
+  /* outline: 1px solid cyan; */
+  border-radius: 1rem;
+  margin-right: auto;
+  margin-left: auto;
+  left: 0;
+  top: 0;
+  right: 0;
+  transition: all 0.4s ease;
+}
+
+header {
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  background-color: black;
+  border-radius: inherit;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(16px);
+  position: relative;
+}
+
+.scroll::after,
+.scroll::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  border-radius: inherit;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -2;
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  animation: spin 10s linear infinite;
+  opacity: 0.6;
+  background: conic-gradient(
+    from var(--angle),
+    transparent 50%,
+    var(--color-primary)
+  );
+}
+
+.scroll::after {
+  background: conic-gradient(
+    from var(--angle),
+    transparent 10%,
+    var(--color-primary-variant-4),
+    var(--color-primary),
+    var(--color-primary-variant-3)
+  );
+  filter: blur(8px);
+}
+
+.name {
+  scale: 1;
+  transition: opacity 0.8s ease, scale 0.3s ease;
+}
+
+.scroll {
+  background-color: rgba(0, 255, 255, 0.127);
+  width: 60vw;
+  height: 3.5rem;
+  /* box-shadow: var(--box-shadow-hover); */
+  .name {
+    scale: 0;
+    opacity: 0;
+  }
+  .quote {
+    font-size: 1em;
+  }
+}
+
+/* header:hover {
+  box-shadow: var(--box-shadow-hover);
+} */
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  font-weight: 500;
+  user-select: none;
+  font-size: var(--font_size-heading);
+  font-family: var(--font-logo);
+  color: var(--color-primary);
+}
+
+.links {
+  font-family: var(--font-subheading);
+  gap: var(--gap-universal);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.links a {
+  /* cursor: none; */
+  position: relative;
+  transition: 600ms;
+}
+
+.links a:hover {
+  color: var(--color-primary);
+}
+
+.links a::before,
+.links a::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  bottom: 0;
+  width: 0;
+  transition: 800ms;
+  background-color: var(--color-primary);
+}
+
+.links a::before {
+  left: 50%;
+}
+
+.links a::after {
+  right: 50%;
+}
+
+.links a:hover::after,
+.links a:hover::before {
+  width: 50%;
+}
+
+.quote {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  background: var(--background-gradient);
+  color: white;
+  white-space: nowrap;
+  padding: 0.4em;
+  padding-left: 0.9em;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  border: none;
+  align-items: center;
+  border-radius: 0.7em;
+  overflow: hidden;
+  transition: all 0.2s;
+  cursor: pointer;
+  /* cursor: none; */
+  /* outline: 1px solid var(--color-primary); */
+}
+
+.svgwrapper svg {
+  color: white;
+}
+
+.inn {
+  display: inline;
+  color: black;
+}
+
+.quote span {
+  display: flex;
+  margin-left: 0.3em;
+  transition: all 0.3s ease-in-out;
+}
+
+.scroll {
+  .quote:hover svg {
+    transform: translateX(180%) rotate(45deg) scale(1.1);
+  }
+}
+
+.quote svg {
+  display: block;
+  transform-origin: center center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.quote:hover .svgwrapper {
+  animation: fly-1 0.6s ease-in-out infinite alternate;
+}
+
+.quote:hover svg {
+  transform: translateX(225%) rotate(45deg) scale(1.1);
+}
+
+.quote:hover span {
+  transform: translateX(10em);
+}
+
+.quote:active {
+  transform: scale(0.97);
+}
+
+@keyframes fly-1 {
+  from {
+    transform: translateY(0.1em);
+  }
+
+  to {
+    transform: translateY(-0.1em);
+  }
+}
+
+@keyframes breathe {
+  50% {
+    opacity: 0.2;
+  }
+}
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes spin {
+  from {
+    --angle: 0deg;
+  }
+  to {
+    --angle: 360deg;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .headerWrapper {
+    position: fixed;
+    top: 0;
+  }
+  header {
+    justify-content: center;
+    transition: all 0.3s ease;
+  }
+  .links {
+    display: none;
+  }
+  .quote {
+    display: none;
+  }
+  .scroll {
+    .name {
+      opacity: 1;
+      scale: 1;
+    }
+  }
+}
+
+@media screen and (max-width: 350px) {
+  header {
+    justify-content: space-between;
+  }
+}

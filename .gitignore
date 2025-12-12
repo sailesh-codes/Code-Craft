@@ -1,37 +1,24 @@
-# Node modules and build output
-node_modules/
-dist/
-
-# Ignore duplicate project directories
-CodeCraftSite/
-
-# OS/generated files
-.DS_Store
-
-# Local/environment files and folders
-.env
-.local/
-.attached_assets/
-
-# Editor/IDE configs
-.vscode/
-.idea/
-.replit
-
-# Server/public build output
-server/public/
-
-# Package management artifacts
-package-lock.json
-yarn.lock
-
-# Tarballs and archives
-*.tar.gz
-
-# Vite, TypeScript, and build tooling
-vite.config.ts.*
-*.tsbuildinfo
-
-# Misc generated, coverage, cache folders
-coverage/
+# Logs
+logs
+*.log
 npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

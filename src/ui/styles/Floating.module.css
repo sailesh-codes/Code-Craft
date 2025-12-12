@@ -1,0 +1,151 @@
+.icon {
+  position: absolute;
+  animation: float 6s forwards infinite;
+  transition: translate 300ms linear;
+  font-size: 3rem;
+  opacity: 0.5;
+  z-index: -999;
+}
+
+.HTML5 {
+  color: hsl(25, 100%, 50%);
+}
+
+.CSS3 {
+  color: hsl(198, 71%, 53%);
+}
+
+.JavaScript {
+  color: hsl(53, 100%, 50%);
+}
+
+.React {
+  color: hsl(189, 99%, 52%);
+}
+
+.Docker {
+  color: hsl(203, 98%, 50%);
+}
+
+.PHP {
+  color: hsl(229, 29%, 64%);
+}
+
+.Git {
+  color: hsl(10, 86%, 57%);
+}
+
+.MongoDB {
+  color: hsl(119, 39%, 47%);
+}
+
+.icon.HTML5 {
+  animation-delay: 0.1s;
+  top: 16vh;
+  left: 4vw;
+}
+
+.icon.CSS3 {
+  animation-delay: 0.5s;
+  top: 22vh;
+  right: 6vw;
+}
+
+.icon.JavaScript {
+  animation-delay: 0.7s;
+  bottom: 28vh;
+  left: 8vw;
+}
+
+.icon.React {
+  animation-delay: 1s;
+  font-size: 2rem;
+  bottom: 12vh;
+  right: 4vw;
+}
+
+.icon.Docker {
+  animation-delay: 1.2s;
+  top: 26vh;
+  right: 33vw;
+}
+
+.db {
+  animation-delay: 1.7s;
+  color: hsl(120, 100%, 25%);
+  font-size: 2rem;
+  top: 28vh;
+  left: 26vw;
+}
+
+.cloud {
+  animation-delay: 2s;
+  color: var(--color-tertiary);
+  font-size: 1.7rem;
+  top: 32vh;
+  right: 2vw;
+}
+
+.icon.PHP {
+  animation-delay: 2.3s;
+  font-size: 2.5rem;
+  bottom: 6vh;
+  right: 6vw;
+}
+
+.icon.Git {
+  animation-delay: 2.5s;
+  font-size: 2rem;
+  bottom: 14vh;
+  left: 30vw;
+}
+
+.server {
+  animation-delay: 2.7s;
+  color: hsl(217, 69%, 60%);
+  font-size: 2rem;
+  top: 52vh;
+  left: 3vw;
+}
+
+.gears {
+  animation-delay: 3s;
+  font-size: 2rem;
+  opacity: 0.2;
+  bottom: 6vh;
+  left: 6vw;
+}
+
+.icon.MongoDB {
+  animation-delay: 3.3s;
+  font-size: 1.9rem;
+  bottom: 14vh;
+  right: 27vw;
+}
+
+.Node {
+}
+
+.Express {
+}
+
+@keyframes float {
+  25% {
+    transform: translateY(6px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+/* @keyframes float {
+  0%,
+  100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: none;
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+} */

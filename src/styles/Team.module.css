@@ -1,0 +1,242 @@
+.Team {
+  --color-spin: rgba(0, 255, 255, 0.5);
+  width: 100%;
+  min-height: 40vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: var(--font-subheading);
+}
+
+.TeamMembers {
+  width: 100%;
+  max-width: 100rem;
+  min-height: 30rem;
+  gap: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+@property --degg {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.TeamMemberCard {
+  --color1: rgba(0, 238, 255, 0.2);
+  position: absolute;
+  width: clamp(10vw, 20rem, 80vw);
+  height: 24em;
+  padding: 2px;
+  color: white;
+  border-radius: 5px;
+  background-color: hsl(0, 0%, 10%);
+  transition: transform 0.6s ease, box-shadow 0.3s ease;
+  &:nth-child(1) {
+    z-index: 10;
+    transform: rotate(7deg);
+    animation-delay: 0.5s;
+  }
+  &:nth-child(2) {
+    z-index: 9;
+    transform: rotate(3deg) translateX(1rem);
+    animation-delay: 1s;
+  }
+  &:nth-child(3) {
+    z-index: 8;
+    transform: rotate(-3deg) translateX(-1rem) translateY(1rem);
+    animation-delay: 1.2s;
+  }
+  &:nth-child(4) {
+    transform: rotate(6deg) translateX(3rem);
+    animation-delay: 1.6s;
+  }
+}
+
+.TeamMemberCard:hover {
+  box-shadow: 5px 5px 15px 1px rgba(0, 179, 255, 0.189);
+}
+
+/* .TeamMembers:hover { */
+
+.Team:hover {
+  .TeamMemberCard:nth-child(1) {
+    transform: translate(-158%, 0);
+  }
+  .TeamMemberCard:nth-child(2) {
+    transform: translate(-53%, 0rem);
+  }
+  .TeamMemberCard:nth-child(3) {
+    transform: translate(53%, 0rem);
+  }
+  .TeamMemberCard:nth-child(4) {
+    transform: translate(158%, 0);
+  }
+}
+
+/* .TeamMembers:hover .TeamMemberContent::after,
+.TeamMembers:hover .TeamMemberContent::before {
+  opacity: 1;
+} */
+
+.TeamMemberContent {
+  border-radius: inherit;
+  background-color: black;
+  position: relative;
+  padding: 1em;
+  gap: 1em;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  h3 {
+    color: var(--color-primary);
+  }
+  h4 {
+    color: var(--color-);
+  }
+}
+
+.Tag {
+  font-style: italic;
+  margin-top: 0.5em;
+}
+
+.TeamMemberContent::after,
+.TeamMemberContent::before {
+  content: "";
+  position: absolute;
+  opacity: 0;
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  top: 50%;
+  left: 50%;
+  transition: all 0.6s ease;
+  background: conic-gradient(
+    from var(--degg),
+    var(--color-spin),
+    /* transparent 50%, */
+    var(--color-spin)
+  );
+  animation: RotateCircle 20s linear forwards infinite;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  border-radius: inherit;
+  opacity: 0;
+}
+
+.TeamMemberContent::after {
+  background: conic-gradient(
+    from var(--degg),
+    transparent 80%,
+    var(--color-spin)
+  );
+  filter: blur(6px);
+}
+
+.TeamMemberContent:hover::after,
+.TeamMemberContent:hover::before {
+  opacity: 1;
+}
+
+.image {
+  width: 100px;
+  height: 100px;
+  font-size: 2.5rem;
+  user-select: none;
+  background-color: hsl(0, 0%, 40%);
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.About {
+  display: flex;
+  gap: 4px;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.Skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+  /* justify-content: flex-start; */
+  justify-content: center;
+  width: 100%;
+  margin-top: 1em;
+  /* margin-top: 2.5em; */
+}
+
+.SkillIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  background: hsl(0, 0%, 5%);
+  backdrop-filter: blur(4px);
+  transition: all 0.2s ease;
+}
+
+.SkillIcon:hover {
+  /* background: rgba(255, 255, 255, 0.1); */
+  border-color: rgba(0, 255, 255, 0.4);
+  transform: translateY(-2px);
+}
+
+.buttonwrapper {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  button {
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: white;
+  }
+}
+
+@keyframes RotateCircle {
+  from {
+    --degg: 0deg;
+  }
+  to {
+    --degg: 360deg;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .Team {
+    min-height: calc(29rem * 4);
+  }
+  .TeamMemberCard:hover {
+    box-shadow: 5px 5px 15px 1px rgba(128, 128, 128, 0.189);
+  }
+  .open,
+  .Team:hover {
+    .TeamMemberCard:nth-child(1) {
+      transform: translate(0, 0);
+    }
+    .TeamMemberCard:nth-child(2) {
+      transform: translate(0, 105%);
+    }
+    .TeamMemberCard:nth-child(3) {
+      transform: translate(0, 210%);
+    }
+    .TeamMemberCard:nth-child(4) {
+      transform: translate(0, 315%);
+    }
+  }
+}

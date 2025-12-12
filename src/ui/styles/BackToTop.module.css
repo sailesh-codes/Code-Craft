@@ -1,0 +1,60 @@
+.BTT {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 50;
+}
+
+.ToTop {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--background-gradient);
+  border: none;
+  font-weight: 600;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 0px 4px rgba(180, 160, 255, 0.253);
+  cursor: pointer;
+  pointer-events: none;
+  transition-duration: 0.3s;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.4s ease;
+  opacity: 0;
+}
+
+.visiblity {
+  opacity: 1;
+  transition: all 0.4s ease;
+  pointer-events: auto;
+}
+
+.svgIcon {
+  width: 24px;
+  height: 24px;
+  transform: rotate(-45deg);
+  transition-duration: 0.3s;
+}
+
+.fire {
+  opacity: 0;
+  transition: 200ms;
+}
+
+.ToTop:hover {
+  transform: translateY(-1px);
+}
+
+.ToTop:hover .svgIcon {
+  transition-duration: 0.3s;
+  /* transform: translateY(-30%) rotate(-45deg); */
+}
+
+.ToTop:hover .fire {
+  opacity: 1;
+}
+
+.launch {
+  transform: translateY(-162%) rotate(-45deg);
+}
