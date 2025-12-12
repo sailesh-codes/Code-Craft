@@ -95,7 +95,7 @@
   opacity: 1;
 }
 
-.ProjectCard:hover .Overlay1 {
+.ProjectCard .Overlay1 {
   background-color: rgba(0, 0, 0, 0.241);
   backdrop-filter: blur(8px);
 }

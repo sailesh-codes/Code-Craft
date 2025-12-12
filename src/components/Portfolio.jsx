@@ -9,27 +9,27 @@ const projectItems = [
     name: "Megasifi",
     description:
       "Megasifi is a modern e-commerce platform offering a vareity of stylish collection",
-    demo: "",
+    demo: "https://megasifi.shop",
     image: Megasifi,
   },
   {
     name: "K.S.M",
     description: "Branding and portfolio website.",
-    demo: "",
+    demo: "https://www.newks-stores.in/",
     image: KSM,
   },
   {
     name: "Movie Pedia",
     description:
       "MoviePedia lets you search, discover, and explore movies in seconds.",
-    demo: "",
+    demo: "https://movie-pedia-navy.vercel.app/",
     image: MoviePedia,
   },
   {
     name: "Echo AI",
     description:
       "Echo AI is a conversational AI assistant designed for productivity.",
-    demo: "",
+    demo: "https://echo-ai-one-xi.vercel.app",
     image: EchoAI,
   },
 ];
@@ -45,29 +45,32 @@ function Buttons({ Demo }) {
 }
 
 function PortfolioDisplay() {
+  const proj = projectItems.map((project, index) => {
+    const { image, name, description, demo } = project;
+    return (
+      <div className={style.ProjectCard} key={index}>
+        <div className={style.ImageWrapper}>
+          <img src={image} alt={name} />
+        </div>
+        <div className={style.Overlay1}>
+          <h1 className={style.Title}>{name}</h1>
+        </div>
+        <div className={style.Overlay}>
+          <div className={style.OverlayContent}>
+            <p>{description}</p>
+          </div>
+          <Buttons Demo={demo} />
+        </div>
+      </div>
+    );
+  });
+
   return (
     <section className={style.Portfolio} id="portfolio">
       <h1>Featured Projects</h1>
       <h2>Showcasing our expertise</h2>
 
-      <div className={style.Projects}>
-        {projectItems.map((project, index) => (
-          <div className={style.ProjectCard} key={index}>
-            <div className={style.ImageWrapper}>
-              <img src={project.image} alt={project.name} />
-            </div>
-            <div className={style.Overlay1}>
-              <h1 className={style.Title}>{project.name}</h1>
-            </div>
-            <div className={style.Overlay}>
-              <div className={style.OverlayContent}>
-                <p>{project.description}</p>
-              </div>
-              <Buttons />
-            </div>
-          </div>
-        ))}
-      </div>
+      <div className={style.Projects}>{proj}</div>
     </section>
   );
 }

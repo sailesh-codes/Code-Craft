@@ -15,7 +15,6 @@ const skillIconMap = {
   CSS: "logos:css-3",
   MySQL: "logos:mysql-icon",
   Python: "logos:python",
-  // Colored C icon; falls back in render if unavailable
   C: "skill-icons:c",
   Linux: "logos:linux-tux",
 };
@@ -47,8 +46,8 @@ const TeamMembers = [
     Name: "Nikeleshwaran",
     role: "Server Side Developer",
     PortfolioLink: "https://portfolio-tau-eight-14n654r7db.vercel.app/",
-    Tag: "",
-    Skills: ["Typescript", "React", "Python","MongoDB","Node"],
+    Tag: "Don't wish for it. Work for it",
+    Skills: ["Typescript", "React", "Python", "MongoDB", "Node"],
     PortofolioAvilable: true,
     image: "N",
   },
@@ -77,6 +76,7 @@ function Team() {
       Skills,
     } = member;
     const Avil = PortofolioAvilable ? "Portfolio" : "Portfolio";
+
     const size = "28px";
 
     return (
