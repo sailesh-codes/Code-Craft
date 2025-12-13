@@ -230,6 +230,9 @@
     border: none;
     color: white;
   }
+  button:not(:disabled):hover {
+    text-decoration: underline;
+  }
 }
 
 @keyframes RotateCircle {
