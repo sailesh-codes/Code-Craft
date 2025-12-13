@@ -61,29 +61,29 @@ const SocialLinks = [
   },
   {
     Name: "Gmail",
-    link: "",
+    link: "mailto:codecraft2k@gmail.com",
     icon: <Icon icon="logos:google-gmail" width={iconSize} height={iconSize} />,
     // color: "#4285f4",
-    color: "#000000",
-  },
-  {
-    Name: "Phone",
-    link: "",
-    icon: <Icon icon="mdi:phone" width={iconSize} height={iconSize} />,
-    color: "hsl(221, 100%, 68%)",
+    color: "hsla(0, 0%, 15%, 1.00)",
   },
   // {
-  //   Name: "X",
-  //   link: "https://www.X.com",
-  //   icon: (
-  //     <Icon
-  //       icon="simple-icons:x"
-  //       width={iconSize}
-  //       height={iconSize}
-  //     />
-  //   ),
-  //   color: "#FFFFFF",
+  //   Name: "Phone",
+  //   link: "tel:+919629590312",
+  //   icon: <Icon icon="mdi:phone" width={iconSize} height={iconSize} />,
+  //   color: "hsl(221, 100%, 68%)",
   // },
+  {
+    Name: "X",
+    link: "https://www.X.com",
+    icon: (
+      <Icon
+        icon="simple-icons:x"
+        width={iconSize}
+        height={iconSize}
+      />
+    ),
+    color: "#FFFFFF",
+  },
   // {
   //   Name: "Facebook",
   //   link: "https://www.facebook.com",

@@ -224,10 +224,10 @@
     color: black;
   }
   &[data-social="Gmail"]::after {
-    background-color: black;
+    background: rgb(28, 28, 28);
   }
   &:hover[data-social="X"] {
-    color: #00000000;
+    color: #000000;
   }
 }
 
