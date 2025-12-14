@@ -166,8 +166,8 @@
 }
 
 .Tag {
-  --op: 0.4;
-  opacity: 0.7;
+  --op: 0.5;
+  opacity: 1;
   background: linear-gradient(
     90deg,
     rgba(255, 255, 255, var(--op)),
