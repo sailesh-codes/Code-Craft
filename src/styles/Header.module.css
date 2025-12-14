@@ -4,14 +4,24 @@
   height: 4.5rem;
   z-index: 100;
   margin: 1rem 0;
-  /* outline: 1px solid cyan; */
   border-radius: 1rem;
   margin-right: auto;
   margin-left: auto;
-  left: 0;
+  left: 50%;
   top: 0;
-  right: 0;
-  transition: all 0.4s ease;
+  transform: translateX(-50%);
+  will-change: transform, width, height;
+  transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+    height 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  pointer-events: none;
+}
+
+.headerWrapper > header {
+  pointer-events: auto;
 }
 
 header {
@@ -25,6 +35,26 @@ header {
   align-items: center;
   backdrop-filter: blur(16px);
   position: relative;
+}
+
+.scroll {
+  background-color: rgba(0, 255, 255, 0.127);
+  width: 80%;
+  height: 3.5rem;
+  transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+    height 0.6s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.3s ease;
+}
+
+.scroll .name {
+  transform: scale(0);
+  opacity: 0;
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.scroll .quote {
+  font-size: 1em;
+  transition: font-size 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .scroll::after,
@@ -62,21 +92,8 @@ header {
 
 .name {
   scale: 1;
+  white-space: nowrap;
   transition: opacity 0.8s ease, scale 0.3s ease;
-}
-
-.scroll {
-  background-color: rgba(0, 255, 255, 0.127);
-  width: 60vw;
-  height: 3.5rem;
-  /* box-shadow: var(--box-shadow-hover); */
-  .name {
-    scale: 0;
-    opacity: 0;
-  }
-  .quote {
-    font-size: 1em;
-  }
 }
 
 /* header:hover {
@@ -234,7 +251,7 @@ header {
   }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1000px) {
   .headerWrapper {
     position: fixed;
     top: 0;
@@ -252,13 +269,27 @@ header {
   .scroll {
     .name {
       opacity: 1;
-      scale: 1;
+      transform: scale(1);
     }
   }
 }
 
-@media screen and (max-width: 350px) {
-  header {
-    justify-content: space-between;
+@media screen and (max-width: 500px) {
+  .headerWrapper {
+    width: 70%;
+  }
+
+  .scroll {
+    /* width: 90%; */
+    height: 3.5rem;
+    .name {
+      transform: scale(1);
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .headerWrapper {
+    width: 90%;
   }
 }

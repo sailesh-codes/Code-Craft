@@ -111,6 +111,7 @@
 
 .OverlayContent p {
   color: #ffffff;
+  text-align: center;
   font-size: 0.85rem;
   margin-bottom: 1em;
 }
@@ -211,6 +212,34 @@
 
   .ProjectCard {
     height: 260px;
+  }
+
+  .Overlay h1 {
+    font-size: 1.2rem;
+  }
+
+  .Overlay p {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 350px) {
+  .Title {
+    top: 2em;
+    font-size: 1.6rem;
+  }
+
+  .Subtitle {
+    font-size: 0.8rem;
+    max-width: 90%;
+  }
+
+  .ProjectCard:nth-child(1) {
+    height: 300px;
+  }
+
+  .Overlay1 {
+    height: 50%;
   }
 
   .Overlay h1 {

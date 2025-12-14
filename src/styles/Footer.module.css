@@ -223,9 +223,9 @@
   &[data-social="X"]::after {
     color: black;
   }
-  &[data-social="Gmail"]::after {
+  /* &[data-social="Gmail"]::after {
     background: rgb(28, 28, 28);
-  }
+  } */
   &:hover[data-social="X"] {
     color: #000000;
   }

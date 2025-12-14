@@ -87,7 +87,7 @@ function Header() {
     <>
       <div className={HS.headerWrapper} ref={hdrRef}>
         <header>
-          {/* <HamMenu /> */}
+          <HamMenu />
           <div className={HS.logo}>
             <img src={Logo} alt="" height={"24px"} />
             <span className={HS.name}>Code Craft</span>
