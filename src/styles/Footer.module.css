@@ -20,6 +20,7 @@
   min-height: 15em;
   gap: 2em;
   padding: 2em 1.5em;
+  padding-bottom: 4em;
   position: relative;
   bottom: 10%;
   backdrop-filter: blur(10px);
