@@ -64,7 +64,7 @@ const SocialLinks = [
     link: "mailto:codecraft2k@gmail.com",
     icon: <Icon icon="logos:google-gmail" width={iconSize} height={iconSize} />,
     // color: "#4285f4",
-    color: "hsla(0, 0%, 15%, 1.00)",
+    color: "hsla(0, 70%, 23%, 1.00)",
   },
   // {
   //   Name: "Phone",
@@ -72,18 +72,18 @@ const SocialLinks = [
   //   icon: <Icon icon="mdi:phone" width={iconSize} height={iconSize} />,
   //   color: "hsl(221, 100%, 68%)",
   // },
-  {
-    Name: "X",
-    link: "https://www.X.com",
-    icon: (
-      <Icon
-        icon="simple-icons:x"
-        width={iconSize}
-        height={iconSize}
-      />
-    ),
-    color: "#FFFFFF",
-  },
+  // {
+  //   Name: "X",
+  //   link: "https://www.X.com",
+  //   icon: (
+  //     <Icon
+  //       icon="simple-icons:x"
+  //       width={iconSize}
+  //       height={iconSize}
+  //     />
+  //   ),
+  //   color: "#FFFFFF",
+  // },
   // {
   //   Name: "Facebook",
   //   link: "https://www.facebook.com",
