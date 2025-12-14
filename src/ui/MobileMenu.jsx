@@ -70,7 +70,7 @@ function MobileMenu() {
         ref={buttonRef}
       >
         <Icon
-          icon={isOpen ? "material-symbols:close-small-outline-rounded" : "material-symbols:menu-open-rounded"}
+          icon={isOpen ? "material-symbols:close-rounded" : "material-symbols:menu-open-rounded"}
           width={iconSize}
           height={iconSize}
         ></Icon>
