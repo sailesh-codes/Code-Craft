@@ -1,0 +1,176 @@
+.Services {
+  --color-hover: rgba(0, 255, 255, 0.74);
+  width: 100%;
+  min-height: 40vh;
+  display: flex;
+  /* padding: 6em clamp(1em, 10em, 23vw); */
+  align-items: center;
+  font-family: "Inter";
+  flex-direction: column;
+}
+
+.Services {
+  --back: hsla(0, 0%, 100%, 0.2);
+  --back-hover: rgba(255, 255, 255, 0.06);
+  --back-hover-2: hsla(0, 0%, 100%, 0.7);
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 70rem;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.card {
+  width: 350px;
+  height: 300px;
+  background-color: var(--back);
+  border-radius: 8px;
+  align-content: center;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+  text-align: center;
+  z-index: 11;
+  transition: all 0.3s linear;
+}
+
+.card::after,
+.card::before {
+  content: "";
+  top: 0;
+  left: 0;
+  opacity: 0;
+  border-radius: inherit;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  pointer-events: none;
+}
+
+.card::before {
+  background: radial-gradient(
+    800px circle at var(--mouse-x) var(--mouse-y),
+    var(--back-hover),
+    transparent 40%
+  );
+  z-index: 2;
+  transition: all 500ms;
+}
+
+.cards:hover > .card::before,
+.cards:hover > .card::after {
+  opacity: 1;
+}
+
+.card::after {
+  background: radial-gradient(
+    800px circle at var(--mouse-x) var(--mouse-y),
+    var(--back-hover-2),
+    transparent 40%
+  );
+  z-index: -1;
+  transition: all 500ms;
+}
+
+.CardContent {
+  padding: 2em;
+  background-color: rgb(0, 0, 0);
+  width: calc(100% - 2px);
+  height: calc(100% - 2px);
+  display: flex;
+  position: absolute;
+  justify-content: space-around;
+  border-radius: inherit;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  flex-direction: column;
+  z-index: 1;
+}
+
+.icon {
+  font-size: 2em;
+}
+
+.title {
+  margin-top: 0.6em;
+  color: var(--color-primary-variant-2);
+  font-size: 1.3em;
+}
+
+.description {
+  margin-top: 1em;
+  font-size: 0.9em;
+  margin-bottom: 6em;
+}
+
+.LearnMore {
+  position: absolute;
+  bottom: 1em;
+  right: 1em;
+}
+
+.LearnMoreButton {
+  background: none;
+  border: none;
+  color: rgb(170, 170, 170);
+  padding: 9px;
+  gap: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  transition: all 400ms;
+  & > .SVGWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3px;
+    position: absolute;
+    right: 40%;
+    transition: all 400ms ease;
+    opacity: 0;
+  }
+  &:hover {
+    color: white;
+    text-decoration: underline;
+    /* transform: translateY(-2px); */
+    /* transform: translateX(-1em); */
+    .SVGWrapper {
+      opacity: 0;
+      /* opacity: 1; */
+      /* transform: translateX(3.2em); */
+    }
+  }
+}
+
+@keyframes Circle {
+  from {
+    --angle: 0deg;
+  }
+  to {
+    --angle: 360deg;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .card {
+    width: 300px;
+    height: 270px;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  .card {
+    width: 280px;
+    height: 270px;
+  }
+  .CardContent {
+    padding: 1em;
+  }
+}

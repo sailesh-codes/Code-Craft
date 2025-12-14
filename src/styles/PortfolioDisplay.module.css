@@ -1,0 +1,252 @@
+.Portfolio {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 40px;
+  padding: 3em;
+  font-family: "Poppins", sans-serif;
+}
+
+.Title {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.Subtitle {
+  font-size: 0.9rem;
+  color: #64748b;
+  max-width: 600px;
+  text-align: center;
+  margin-top: 8px;
+}
+
+.Projects {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+  max-width: 1100px;
+  height: 420px;
+  margin-top: 40px;
+}
+
+.ProjectCard {
+  position: relative;
+  width: 220px;
+  height: 100%;
+  flex-grow: 1;
+  border-radius: 7px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: width 0.5s ease;
+}
+
+.ProjectCard:hover {
+  width: 100%;
+}
+
+.ImageWrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.ImageWrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.Overlay1,
+.Overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.Overlay {
+  top: 0;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  color: white;
+  /* white-space: nowrap; */
+}
+
+.Overlay1 {
+  opacity: 1;
+  bottom: 0;
+  height: 25%;
+  background: none;
+  transition: all 0.3s;
+  h1 {
+    transition: all 0.3s;
+    color: var(--color-primary-variant-4);
+    transform: translateY(-150%);
+  }
+}
+
+.ProjectCard:hover .Overlay {
+  opacity: 1;
+}
+
+.ProjectCard .Overlay1 {
+  background-color: rgba(0, 0, 0, 0.241);
+  backdrop-filter: blur(8px);
+}
+
+.Title {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.8rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.OverlayContent p {
+  color: #ffffff;
+  text-align: center;
+  font-size: 0.85rem;
+  margin-bottom: 1em;
+}
+
+/* .Overlay p {
+} */
+
+.ButtonWrapper {
+  bottom: 10px;
+  right: 16px;
+  gap: 10px;
+  display: flex;
+  position: absolute;
+}
+
+.ButtonWrapper button {
+  --button-color: var(--color-primary);
+  background: none;
+  border: none;
+  color: var(--button-color);
+  cursor: pointer;
+  position: relative;
+  font-size: 1em;
+  transition: 0.3s ease;
+}
+
+.ButtonWrapper button::after {
+  content: "";
+  bottom: 1px;
+  left: 0;
+  width: 0%;
+  overflow: hidden;
+  transition: 0.6s ease;
+  height: 1px;
+  background-color: var(--button-color);
+  position: absolute;
+}
+
+.ButtonWrapper button:hover::after {
+  background-color: var(--button-color);
+  width: 100%;
+}
+
+.ButtonWrapper button:hover {
+  color: var(--button-color);
+}
+
+@media (max-width: 1024px) {
+  .Projects {
+    gap: 16px;
+    height: 360px;
+  }
+
+  .ProjectCard {
+    width: 180px;
+  }
+  .Overlay1 {
+    height: 30%;
+  }
+
+  .Overlay h1 {
+    font-size: 1.4rem;
+  }
+
+  .Overlay p {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .Projects {
+    height: auto;
+    flex-direction: column;
+  }
+
+  .ProjectCard {
+    width: 100%;
+    height: 300px;
+  }
+  .Overlay1 {
+    height: 35%;
+  }
+
+  .ProjectCard:hover {
+    width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  .Title {
+    font-size: 1.6rem;
+  }
+
+  .Subtitle {
+    font-size: 0.8rem;
+    max-width: 90%;
+  }
+
+  .ProjectCard {
+    height: 260px;
+  }
+
+  .Overlay h1 {
+    font-size: 1.2rem;
+  }
+
+  .Overlay p {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 350px) {
+  .Title {
+    top: 2em;
+    font-size: 1.6rem;
+  }
+
+  .Subtitle {
+    font-size: 0.8rem;
+    max-width: 90%;
+  }
+
+  .ProjectCard:nth-child(1) {
+    height: 300px;
+  }
+
+  .Overlay1 {
+    height: 50%;
+  }
+
+  .Overlay h1 {
+    font-size: 1.2rem;
+  }
+
+  .Overlay p {
+    font-size: 0.7rem;
+  }
+}

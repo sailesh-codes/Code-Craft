@@ -1,0 +1,42 @@
+.PageNotFound {
+  width: 100%;
+  height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.er {
+  font-family: "Inter";
+  font-size: 7em;
+}
+
+.Wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ButtonWrapper {
+  button {
+    background: none;
+  }
+}
+
+.Where {
+  font-style: italic;
+  font-size: 1.8em;
+  position: fixed;
+  bottom: 1em;
+}
+
+.notFound {
+  font-family: "Inter";
+  position: fixed;
+  display: flex;
+  gap: 0.5em;
+  align-items: center;
+  bottom: 1em;
+  right: 1em;
+}

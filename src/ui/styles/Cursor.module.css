@@ -1,0 +1,42 @@
+.cursor {
+  --size: 6px;
+  background-color: white;
+  width: var(--size);
+  height: var(--size);
+  top: 0px;
+  left: 0px;
+  opacity: 0;
+  border-radius: 100%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 1000;
+  transition: opacity 0.3s ease;
+  /* box-shadow: 0px 0px 20px 20px rgba(255, 255, 255, 0.2); */
+}
+
+:root:hover .cursor.on {
+  opacity: 1;
+  cursor: none;
+}
+
+.cursor.off {
+  opacity: 0;
+  cursor: auto;
+}
+
+.cursorToggle {
+  position: fixed;
+  bottom: 1em;
+  left: 1em;
+  background: none;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.disappeared {
+  opacity: 0;
+  transform: translateY(2em);
+  pointer-events: none;
+}

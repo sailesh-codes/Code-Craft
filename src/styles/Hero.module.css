@@ -1,0 +1,157 @@
+.Hero {
+  width: 100%;
+  height: calc(100svh);
+  /* margin-top: 5em; */
+  padding: 8em 0;
+  display: flex;
+  padding: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+.Intro {
+  font-family: var(--font-subheading);
+  font-size: clamp(1.7rem, 5vw, 7rem);
+  font-weight: 700;
+  display: flex;
+  padding: 0.8em;
+  gap: 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+  line-height: 90%;
+}
+
+.L1 {
+  white-space: nowrap;
+}
+
+.L2 {
+  background-image: var(--background-gradient);
+  background-clip: text;
+  color: transparent;
+}
+
+.L3 {
+  margin-top: 2rem;
+  font-size: clamp(0.7rem, 3vw, 1.6rem);
+  text-align: center;
+  white-space: wrap;
+  font-weight: 400;
+  opacity: 0.8;
+}
+
+.button_wrapper {
+  gap: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+}
+
+.ViewWork,
+.start {
+  font-size: var(--font-subheading);
+  color: var(--text);
+  font-weight: 500;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 0.7em 1em;
+  border-radius: 5px;
+  transition: all 0.5s ease;
+  position: relative;
+}
+
+.ViewWork {
+  background: var(--color-primary-variant-4);
+  outline: 1px solid var(--color-primary-variant-4);
+}
+
+.start {
+  background: var(--color-secondary);
+  outline: 1px solid var(--color-secondary);
+  /* outline: 1px solid var(--color-primary); */
+}
+
+.ViewWork:hover,
+.start:hover {
+  background: none;
+}
+
+.svg_wrapper {
+  background-color: white;
+  padding: 0.4em;
+  transform: translateX(-10px);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.35s ease;
+  z-index: 1;
+}
+
+.ViewWork:active,
+.start:active {
+  scale: 0.97;
+}
+
+.scroll {
+  position: absolute;
+  bottom: 5vh;
+  font-size: 1.4rem;
+  opacity: 0.7;
+  animation: bounce 1s ease forwards infinite;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: none;
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .Intro {
+    font-size: 2em;
+  }
+}
+
+@media screen and (max-width: 395px) {
+  .Intro {
+    font-size: 1.7em;
+  }
+}
+
+@media screen and (max-width: 345px) {
+  .Intro {
+    font-size: 1.4em;
+  }
+
+  .ViewWork,
+  .start {
+    font-size: 1em;
+  }
+}
